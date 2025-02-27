@@ -277,7 +277,7 @@ def load_hitran_file(file_path, molecule_name, band_name="default"):
             data.append([wavenumber, wavelength, einstein_A, lower_energy, vibrational_band, line_name, gu, gl])
 
     # Convert to DataFrame
-    df = pd.DataFrame(data, columns=['Wavenumber', 'Wavelength', 'Einstein A', 'Energy_cm', 'Band', 'LineName', 'gu', 'gl'])
+    df = pd.DataFrame(data, columns=['Wavenumber', 'Wavelength', 'EinsteinA', 'Energy_cm', 'Band', 'LineName', 'gu', 'gl'])
 
     return df
 
