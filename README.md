@@ -9,10 +9,10 @@ A Python tool for parsing HITRAN spectral line files based on molecule and vibra
   - **Wavenumber** (cm⁻¹)  
   - **Wavelength** (µm)  
   - **Einstein A coefficient** (s⁻¹)  
-  - **Lower state energy** $E_l$ (cm$^{-1}$)
-  - **Vibrational band assignment**  
+  - **Lower state energy** E<sub>l</sub> (cm<sup>-1</sup>)
+  - **Vibrational band**  
   - **Transition name**  
-  - **Upper and lower statistical weights** \( $g_u$, $g_l$ \)
+  - **Upper and lower statistical weights** \(g<sub>u</sub>, g<sub>l</sub>\)
 
 - Currently supports **HCN, H¹³CN, C₂H₂, ¹³CCH₂, CH₄, NH₃, CS** molecules (more to be added).
 
