@@ -3,8 +3,17 @@
 A Python tool for parsing HITRAN spectral line files based on molecule and vibrational band criteria.
 
 ## Features
-- Extracts spectral lines from HITRAN `.par` files.
-- Filters data by **molecule, and vibrational band**.
+- Extracts **spectral lines parameters** from HITRAN `.par` files.
+- Filters data by **molecule and vibrational band**.
+- Retrieves key parameters, including:
+  - **Wavenumber** (cm⁻¹)  
+  - **Wavelength** (µm)  
+  - **Einstein A coefficient** (s⁻¹)  
+  - **Lower state energy** \( E_l \) (cm⁻¹)  
+  - **Vibrational band assignment**  
+  - **Transition name**  
+  - **Upper and lower statistical weights** \( g_u, g_l \)
+
 - Currently supports **HCN, H¹³CN, C₂H₂, ¹³CCH₂, CH₄, NH₃, CS** molecules (more to be added).
 
 ## Installation
@@ -41,15 +50,17 @@ list_available_hitran_selections()
 To extract spectral lines for a specific **molecule and vibrational band**, use the following **example script**:
 
 ```python
-from parse_hitran import load_hitran_file
+>>> from parse_hitran import load_hitran_file
+>>> example_file = "example_HITRAN_CS.par"  # Replace with your actual file
+>>> cs_data = load_hitran_file(example_file, "CS", "v_0")
+>>> print(cs_data.head())
 
-# Example HITRAN file path
-example_file = "example_HITRAN_CS.par"  # Replace with actual file path
-
-# Load and extract CS v_0 lines from the HITRAN file
-cs_data = load_hitran_file(example_file, "CS", "v_0")
-
-print(cs_data.head())  # Display first few lines
+   Wavenumber  Wavelength  Einstein A  Energy_cm  Band  LineName     gu     gl
+0  1057.966036    9.452099        4.07  7958.3638   1 0       P99  197.0  199.0
+1  1060.611915    9.428519        4.10  7801.7555   1 0       P98  195.0  197.0
+2  1063.248859    9.405136        4.13  7646.6264   1 0       P97  193.0  195.0
+3  1065.876842    9.381947        4.17  7492.9796   1 0       P96  191.0  193.0
+4  1068.495838    9.358951        4.20  7340.8181   1 0       P95  189.0  191.0
 ```
 
 Make sure to replace `"example_HITRAN.par"` with **your actual HITRAN file**.
