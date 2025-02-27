@@ -268,13 +268,13 @@ def load_hitran_file(file_path, molecule_name, band_name="default"):
             wavelength = col_map["wavelength"](x)
             einstein_A = col_map["einstein_A"](x)
             lower_energy = col_map["energy"](x)
-            gu = int(x[col_map["gu"]])
-            gl = int(x[col_map["gl"]])
+            gu = float(x[col_map["gu"]])
+            gl = float(x[col_map["gl"]])
             line_name = col_map["line_name"](x)
             vibrational_band = extracted_band_values  # Store matched band
 
             # Store extracted values
-            data.append([wavenumber, wavelength, einstein_A, lower_energy, vibrational_band, line_name, gu, gl])
+            data.append([wavenumber, wavelength, einstein_A, lower_energy, vibrational_band, line_name, int(gu), int(gl)])
 
     # Convert to DataFrame
     df = pd.DataFrame(data, columns=['Wavenumber', 'Wavelength', 'EinsteinA', 'Energy_cm', 'Band', 'LineName', 'gu', 'gl'])
