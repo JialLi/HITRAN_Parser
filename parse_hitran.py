@@ -141,11 +141,10 @@ HITRAN_RULES = {
             "energy": lambda x: float(x[4][:-12]),
             "gu": -2,
             "gl": -1,
-            "band_columns": (5, 17),
-            "band_criteria": "000 0 1 0 1 u 000 0 0 0 0+ g",
-            "line_name": lambda x: "".join(x[17:19]),
-        },
-    
+            "band_columns": (5, 15),
+            "band_criteria": "000 0 1 0 1 000 0 0 0 0+",
+            "line_name": lambda x: "".join(x[15:17]),
+        },    
     },
 
     "CH4": { 
