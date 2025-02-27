@@ -9,10 +9,10 @@ A Python tool for parsing HITRAN spectral line files based on molecule and vibra
   - **Wavenumber** (cm⁻¹)  
   - **Wavelength** (µm)  
   - **Einstein A coefficient** (s⁻¹)  
-  - **Lower state energy** \( E_l \) (cm⁻¹)  
+  - **Lower state energy** $E_l$ (cm$^{-1}$)
   - **Vibrational band assignment**  
   - **Transition name**  
-  - **Upper and lower statistical weights** \( g_u, g_l \)
+  - **Upper and lower statistical weights** \( $g_u$, $g_l$ \)
 
 - Currently supports **HCN, H¹³CN, C₂H₂, ¹³CCH₂, CH₄, NH₃, CS** molecules (more to be added).
 
@@ -55,7 +55,7 @@ To extract spectral lines for a specific **molecule and vibrational band**, use 
 >>> cs_data = load_hitran_file(example_file, "CS", "v_0")
 >>> print(cs_data.head())
 
-   Wavenumber  Wavelength  Einstein A  Energy_cm  Band  LineName     gu     gl
+   Wavenumber  Wavelength  EinsteinA  Energy_cm  Band  LineName     gu     gl
 0  1057.966036    9.452099        4.07  7958.3638   1 0       P99  197.0  199.0
 1  1060.611915    9.428519        4.10  7801.7555   1 0       P98  195.0  197.0
 2  1063.248859    9.405136        4.13  7646.6264   1 0       P97  193.0  195.0
