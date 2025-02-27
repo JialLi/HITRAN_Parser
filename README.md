@@ -44,7 +44,7 @@ from parse_hitran import load_hitran_file
 # Example HITRAN file path
 example_file = "example_HITRAN_CS.par"  # Replace with actual file path
 
-# Load and extract NH3 v2_0 lines from the HITRAN file
+# Load and extract CS v_0 lines from the HITRAN file
 cs_data = load_hitran_file(example_file, "CS", "v_0")
 
 print(cs_data.head())  # Display first few lines
