@@ -55,12 +55,12 @@ To extract spectral lines for a specific **molecule and vibrational band**, use 
 >>> cs_data = load_hitran_file(example_file, "CS", "v_0")
 >>> print(cs_data.head())
 
-   Wavenumber  Wavelength  EinsteinA  Energy_cm  Band  LineName     gu     gl
-0  1057.966036    9.452099        4.07  7958.3638   1 0       P99  197.0  199.0
-1  1060.611915    9.428519        4.10  7801.7555   1 0       P98  195.0  197.0
-2  1063.248859    9.405136        4.13  7646.6264   1 0       P97  193.0  195.0
-3  1065.876842    9.381947        4.17  7492.9796   1 0       P96  191.0  193.0
-4  1068.495838    9.358951        4.20  7340.8181   1 0       P95  189.0  191.0
+    Wavenumber  Wavelength  EinsteinA  Energy_cm Band LineName   gu   gl
+0  1057.966036    9.452099       4.07  7958.3638  1 0      P99  197  199
+1  1060.611915    9.428519       4.10  7801.7555  1 0      P98  195  197
+2  1063.248859    9.405136       4.13  7646.6264  1 0      P97  193  195
+3  1065.876842    9.381947       4.17  7492.9796  1 0      P96  191  193
+4  1068.495838    9.358951       4.20  7340.8181  1 0      P95  189  191
 ```
 
 Make sure to replace `"example_HITRAN.par"` with **your actual HITRAN file**.
