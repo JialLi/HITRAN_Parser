@@ -268,8 +268,8 @@ def load_hitran_file(file_path, molecule_name, band_name="default"):
             wavelength = col_map["wavelength"](x)
             einstein_A = col_map["einstein_A"](x)
             lower_energy = col_map["energy"](x)
-            gu = float(x[col_map["gu"]])
-            gl = float(x[col_map["gl"]])
+            gu = int(x[col_map["gu"]])
+            gl = int(x[col_map["gl"]])
             line_name = col_map["line_name"](x)
             vibrational_band = extracted_band_values  # Store matched band
 
