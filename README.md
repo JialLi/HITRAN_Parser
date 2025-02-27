@@ -34,6 +34,8 @@ from parse_hitran import list_available_hitran_selections
 list_available_hitran_selections()
 ```
 
+> **Note:** The `"band code"` used in the code will be displayed when listing available molecules and bands. For the corresponding **physical band representations**, see the [Supported Molecules & Bands](#supported-molecules--bands) section.
+
 ### **🔹 Extract Data from a HITRAN File**
 
 To extract spectral lines for a specific **molecule and vibrational band**, use the following **example script**:
