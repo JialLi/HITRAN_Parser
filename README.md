@@ -9,7 +9,7 @@ A Python tool for parsing HITRAN spectral line files based on molecule and vibra
   - **Wavenumber** (cm⁻¹)  
   - **Wavelength** (µm)  
   - **Einstein A coefficient** (s⁻¹)  
-  - **Lower state energy** E<sub>l</sub> (cm<sup>-1</sup>)
+  - **Lower state energy** E<sub>l</sub> (cm⁻¹)
   - **Vibrational band**  
   - **Transition name**  
   - **Upper and lower statistical weights** \(g<sub>u</sub>, g<sub>l</sub>\)
