@@ -62,7 +62,7 @@ To extract spectral lines for a specific **molecule and vibrational band**, use 
 3  1065.876842    9.381947       4.17  7492.9796  1 0      P96  191  193
 4  1068.495838    9.358951       4.20  7340.8181  1 0      P95  189  191
 
->>> cs_wv = cs_data['Wavenumber'].values # Print the wavenumber array
+>>> cs_wv = cs_data['Wavenumber'].values # Read the wavenumber array
 >>> print(cs_wv)
 [1057.966036 1060.611915 1063.248859 ... 1284.806427]
 ```
